@@ -1,0 +1,20 @@
+<!--pages/getAssignment/getAssignment.wxml-->
+<view class="btn-area">
+  <view class='list-head'>{{assignment.name}}</view>
+  <view class='list-li'>
+      <text>{{assignment.content}}</text>
+  </view>
+  <view class='list-head'>Comments</view>
+  <view class='list-li'>
+  <view class="list-comments" wx:for="{{assignment.comments}}"  wx:key="index">
+      <text wx:if="{{item.user_id==1}}">Teacher ({{item.created}}): {{item.content}}</text>
+      <text wx:else>Parent ({{item.created}}): {{item.content}} </text>
+  </view>
+  </view>
+  <view class="list-li" >
+    <form bindsubmit="submitComment">
+      <textarea placeholder="submit your comments ...." name="textarea"/>
+      <button form-type="submit"> Submit </button>
+    </form>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/getAssignment/getAssignment.wxml-->
+<view class="btn-area">
+  <view class='list-head'>Assignments List</view>
+  <view class="body-view" wx:for="{{assignments}}"  wx:key="index">
+    <view>
+      <button id="{{item.id}}" bindtap="getAssignment">{{item.name}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<!--pages/dashboard.wxml-->
+<view class="btn-area">
+  <view class='list-head'>Class List</view>
+  <view class="body-view" wx:for="{{className}}"  wx:key="index">
+    <view>
+      <button id="{{item.id}}" bindtap="getAssignments">{{item.name}}</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+/* pages/dashboard.wxss */
+.mflex {display:flex;}
+.list-head{text-align: center;font-size:32rpx;}
+.list-li{height:166rpx;padding:40rpx 30rpx;border-bottom:2rpx solid #e4e7ec;flex-wrap:wrap;justify-content:space-between;flex-direction:column;align-items:center;}
+.list-img{width:210rpx;height:166rpx;}
+.list-img image{display: block;width:210rpx;height:166rpx;}
+.list-tit,.list-adr,.list-tag,.list-con{width:calc( 100% - 240rpx );}
+.list-tit{font-size:30rpx;color:#1c2627;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;display:inline-block;}
+.list-con{font-size:24rpx;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.list-adr{font-size:22rpx;color:#555;text-overflow:ellipsis;white-space:nowrap;overflow:hidden; }
+.list-tag{font-size:20rpx;}
+.list-tag text{background:#f5ecdf;color:#ff9d00;padding:5rpx;margin-right:10rpx;}
+.list-money{font-size:30rpx;color:red;flex:1;text-align: right;font-weight:bold;}
+.dizhi{flex:2;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+.list-tag text{color:#fff;}
+.list-tag .tag_0{background:#c3dbf3;}
+.list-tag .tag_1{background:#fbd08f}
+.list-tag .tag_2{background:#fdd2d5;}
+.list-tag .tag_3{background:#add2a5;}
