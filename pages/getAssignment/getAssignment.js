@@ -16,7 +16,7 @@ Page({
     var _this = this
     var id = options.id;
     wx.request({
-      url: 'http://127.0.0.1:8000/api/assignments/' + id,//json数据地址
+      url: 'http://127.0.0.1:8000/api/assignments/' + id,
       headers: {
         'Content-Type': 'application/json'
       },
