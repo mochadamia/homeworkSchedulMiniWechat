@@ -12,9 +12,9 @@
   </view>
   </view>
   <view class="list-li" >
-    <form bindsubmit="submitComment">
-      <textarea placeholder="submit your comments ...." name="textarea"/>
-      <button form-type="submit"> Submit </button>
+    <form bindsubmit="submitComment" id="{{assignment.id}}">
+      <textarea placeholder="submit your comments ...." name="feedback" value="{{form_info}}"/>
+      <button form-type="submit" > Submit </button>
     </form>
   </view>
 </view>

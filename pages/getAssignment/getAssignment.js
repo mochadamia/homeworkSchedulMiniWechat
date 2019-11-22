@@ -21,7 +21,7 @@ Page({
         'Content-Type': 'application/json'
       },
       success: function (res) {
-        console.log(res.data)
+        //console.log(res.data)
         //console.log(res.data.imgListData[0].tag)
         _this.setData({
           assignment: res.data[0],
@@ -29,7 +29,40 @@ Page({
       }
     })
   },
-
+  submitComment: function (e) {
+    var feedback = e.detail.value.feedback;
+    var assignment_id = e.currentTarget.id;
+    var _this = this
+    wx.request({
+      url: "http://127.0.0.1:8000/api/comments/",
+      method: "POST",
+      data: {
+        content: feedback,
+        assignment: assignment_id,
+        status: 1,
+        user_id: 2
+      },
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        //console.log(res.data);
+        //console.log(res.data.assignment_id);
+        var assignment = res.data.assignment_id;
+        wx.showToast({
+          title: "Submit Success", 
+          success: res => {
+            _this.setData({ 
+              assignment: assignment,
+              form_info: ''
+            });
+            //console.log(assignment)
+            _this.onShow()
+          }
+        })
+      },
+    })
+  },
   /**
    * Lifecycle function--Called when page is initially rendered
    */
